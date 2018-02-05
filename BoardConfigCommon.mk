@@ -139,7 +139,14 @@ BOARD_VOLD_MAX_PARTITIONS := 40
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/devices/platform/msm_hsusb/gadget/lun%d/file
 
 # Shims
-TARGET_LD_SHIM_LIBS := /system/lib/liblog.so|libmoto.so /system/vendor/lib/libqc-opt.so|libshim_qcopt.so /system/bin/thermal-engine:libshims_thermal.so:/system/bin/mpdecision|libshims_atomic.so:/system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so:/system/vendor/lib/libqc-opt.so|libshims_sensorlistener.so:/system/vendor/lib/libmmcamera2_stats_algorithm.so|libshims_atomic.so
+TARGET_LD_SHIM_LIBS := /system/lib/liblog.so|libmoto.so \
+                       /system/vendor/lib/libqc-opt.so|libshim_qcopt.so \
+                       /system/bin/thermal-engine|libshims_thermal.so \
+                       /system/bin/mpdecision|libshims_atomic.so \
+                       /system/lib/libmot_sensorlistener.so|libshims_sensorlistener.so \
+                       /system/vendor/lib/libqc-opt.so|libshims_sensorlistener.so \
+                       /system/vendor/lib/libmmcamera2_stats_algorithm.so|libshims_atomic.so \
+                       /system/lib/libmdmcutback.so|libqsap_shim.so
 
 # Wifi
 BOARD_HAS_QCOM_WLAN := true

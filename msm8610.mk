@@ -195,7 +195,7 @@ PRODUCT_PACKAGES += \
 # GNSS HAL
 PRODUCT_PACKAGES += \
     android.hardware.gnss@1.0-imp
-    
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8610
@@ -207,11 +207,15 @@ PRODUCT_COPY_FILES += \
 # Filesystem
 PRODUCT_PACKAGES += \
     setup_fs
-    
+
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
-    
+
+# Ril
+PRODUCT_PACKAGES += \
+    libqsap_shim
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl
