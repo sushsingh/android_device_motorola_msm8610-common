@@ -420,11 +420,6 @@ service audiod /system/bin/audiod
     user system
     group system
 
-service charge_only_mode /system/bin/charge_only_mode
-    user root
-    group graphics system input
-    disabled
-
 service irsc_util /system/bin/irsc_util "/etc/sec_config"
     class main
     user root
