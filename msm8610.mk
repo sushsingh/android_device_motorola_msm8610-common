@@ -73,6 +73,10 @@ DEVICE_PACKAGE_OVERLAYS += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
+    android.hardware.soundtrigger@2.0-impl \
     audio_policy.msm8610 \
     audio.primary.msm8610 \
     audio.a2dp.default \
@@ -81,12 +85,6 @@ PRODUCT_PACKAGES += \
     libaudio-resampler \
     libqcomvisualizer \
     libqcomvoiceprocessing
-
-PRODUCT_PACKAGES += \
-    android.hardware.audio@2.0-impl \
-    android.hardware.audio.effect@2.0-impl \
-    android.hardware.broadcastradio@1.0-impl \
-    android.hardware.soundtrigger@2.0-impl
 
 # Audio Configuration
 PRODUCT_COPY_FILES += \
@@ -123,8 +121,6 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl-legacy \
     camera.device@3.2-impl \
     camera.msm8610 \
-    libshim_qcopt \
-    libshims_sensorlistener \
     Snap
 
 # IPC router config
@@ -140,10 +136,6 @@ PRODUCT_PACKAGES +=  \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media_codecs.xml:system/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media_profiles.xml:system/etc/media_profiles.xml
-
-# Motorola
-PRODUCT_PACKAGES += \
-    libmoto
 
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
@@ -166,10 +158,6 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service \
     com.android.future.usb.accessory
 
-# Perf
-PRODUCT_PACKAGES += \
-    libshims_atomic
-
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.0-impl \
@@ -191,12 +179,9 @@ PRODUCT_PACKAGES += \
     android.hardware.light@2.0-impl \
     lights.msm8610
 
-# GNSS HAL
-PRODUCT_PACKAGES += \
-    android.hardware.gnss@1.0-imp
-
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
     gps.msm8610
 
 # HIDL
@@ -211,9 +196,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# Ril
+# Shim
 PRODUCT_PACKAGES += \
-    libqsap_shim
+    libqsap_shim \
+    libshims_thermal \
+    libshims_atomic \
+    libshim_qcopt \
+    libshims_sensorlistener \
+    libmoto
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -221,26 +211,19 @@ PRODUCT_PACKAGES += \
 
 # Misc
 PRODUCT_PACKAGES += \
-    libxml2
-
-# Misc
-PRODUCT_PACKAGES += \
     curl \
     libcurl \
     tcpdump \
     libcnefeatureconfig \
-    libshims_thermal
+    libxml2
 
 # Vibrator
 PRODUCT_PACKAGES += \
     android.hardware.vibrator@1.0-impl
 
-# WiFi HAL
-PRODUCT_PACKAGES += \
-    android.hardware.wifi@1.0-service
-
 # Wifi
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     hostapd.accept \
     hostapd.deny \
     hostapd \
