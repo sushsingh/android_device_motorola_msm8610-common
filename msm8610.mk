@@ -64,16 +64,10 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/wifi/WCNSS_cfg.dat:system/etc/firmware/wlan/prima/WCNSS_cfg.dat \
     $(COMMON_PATH)/wifi/WCNSS_qcom_cfg.ini:system/etc/firmware/wlan/prima/WCNSS_qcom_cfg.ini
 
-<<<<<<< HEAD:msm8610.mk
-<<<<<<< HEAD:msm8610.mk
+
 PRODUCT_TAGS += dalvik.gc.type-precise
 
 PRODUCT_AAPT_PREF_CONFIG := hdpi
-=======
-=======
->>>>>>> 828c30c... msm8226-common: native: Increase ART heap growth limit to 192MB:msm8226.mk
-$(call inherit-product-if-exists, vendor/prebuilt/config.mk)
->>>>>>> 828c30c... msm8226-common: native: Increase ART heap growth limit to 192MB:msm8226.mk
 
 DEVICE_PACKAGE_OVERLAYS += \
     $(COMMON_PATH)/overlay
@@ -111,14 +105,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
 
-# Dalvik properties
-PRODUCT_PROPERTY_OVERRIDES += \
-    dalvik.vm.heapstartsize=8m \
-    dalvik.vm.heapgrowthlimit=192m \
-    dalvik.vm.heapsize=256m \
-    dalvik.vm.heaptargetutilization=0.75 \
-    dalvik.vm.heapminfree=512k \
-    dalvik.vm.heapmaxfree=8m
 
 # DRM
 PRODUCT_PACKAGES += \
